@@ -41,7 +41,7 @@ public class MemberController {
             model.addAttribute("errorMessage",e.getMessage());
             return "member/memberForm";
         }
-        return "redirect:/";
+        return "member/memberForm";
     }
 
     @GetMapping(value = "/login")
