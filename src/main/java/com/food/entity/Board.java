@@ -39,6 +39,17 @@ public class Board {
         return board;
     }
 
+    public static Board updateBoard(BoardFormDto boardFormDto) {
+        Board board = new Board();
+        board.setTitle(boardFormDto.getTitle());
+        board.setContent(boardFormDto.getContent());
+        board.setUsername(boardFormDto.getUsername());
+        board.setRegTime(LocalDateTime.now());
+        return board;
+    }
+
+
+
 
 
 }

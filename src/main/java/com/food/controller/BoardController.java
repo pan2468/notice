@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Log4j2
@@ -74,5 +75,19 @@ public class BoardController {
         return "board/boardDetail";
     }
 
+
+    @PostMapping("/update")
+    public String updateBoard(@ModelAttribute("boardDetail") BoardFormDto boardFormDto){
+        Board board = new Board();
+        board.setId(boardFormDto.getId());
+        board.setTitle(boardFormDto.getTitle());
+        board.setContent(boardFormDto.getContent());
+        board.setUsername(boardFormDto.getUsername());
+        board.setRegTime(LocalDateTime.now());
+
+        boardService.saveBoard(board);
+
+        return "redirect:/board/list";
+    }
 
 }

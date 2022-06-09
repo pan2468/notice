@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 @Getter @Setter
 public class BoardFormDto {
 
+    private Long id;
+
     @NotEmpty(message = "제목은 필수 입력 값입니다.")
     private String title;
 
