@@ -1,19 +1,19 @@
 package com.food.entity;
 
-import com.food.constant.Role;
-import com.sun.istack.NotNull;
+import com.food.dto.BoardFormDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "board")
-@Getter
-@Setter
+@Getter @Setter
 @ToString
 public class Board {
 
@@ -22,23 +22,24 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String username;
-
-    @NotNull
-    @Size(min=2,max = 30, message = "제목은 2자이상 30자 이하입니다.")
     private String title;
+
     private String content;
 
-    private LocalDate regTime;
+    private String username;
 
-    private int hit;
+   private LocalDateTime regTime;
 
-    private String searchBy;    //검색조건
 
-    private String searchQuery = "";  //검색어 입력
+    public static Board createBoard(BoardFormDto boardFormDto) {
+        Board board = new Board();
+        board.setTitle(boardFormDto.getTitle());
+        board.setContent(boardFormDto.getContent());
+        board.setUsername(boardFormDto.getUsername());
+        board.setRegTime(LocalDateTime.now());
+        return board;
+    }
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
 
 
 }
