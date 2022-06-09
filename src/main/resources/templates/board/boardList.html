@@ -23,6 +23,7 @@
 				<th scope="col">내용</th>
 				<th scope="col">작성자</th>
 				<th scope="col">작성일</th>
+			    <th scope="col">조회수</th>
 		  	</tr>
 		  	<tr th:each="board : ${boards}">
 				<td th:text="${board.id}"></td>
@@ -30,6 +31,7 @@
 				<td th:text="${board.content}"></td>
 				<td th:text="${board.username}"></td>
 				<td th:text="${board.regTime}"></td>
+			    <td th:text="${board.hit}"></td>
 		  	</tr>
 	  	</table>
 		<div class="text-end">

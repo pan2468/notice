@@ -38,7 +38,13 @@
 			<input type="text" class="form-control" th:field="*{regTime}"  id="form-regTime" readonly>
 			<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
 		</div>
-		<button type="submit" class="btn btn-primary" id="reg">등록</button>
+		<div class="mb-3">
+			<label class="form-hit">조회수</label>
+			<input type="text" class="form-control" th:field="*{hit}"  id="form-hit" readonly>
+			<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
+		</div>
+		<button type="submit" class="btn btn-primary update" id="reg">수정</button>
+		<a type="button" class="btn btn-primary delete" th:href="@{/board/delete(id=${boardDetail.id})}">삭제</a>
 		<a type="button" class="btn btn-danger" th:href="@{/board/list}" id="cacel">목록</a>
 	</form>
 </div>

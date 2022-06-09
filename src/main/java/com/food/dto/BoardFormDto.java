@@ -21,7 +21,7 @@ public class BoardFormDto {
 
     private LocalDateTime regTime;
 
-    //private int hit;
+    private int hit; // 조회수 증가
 
     //private String searchBy;    //검색조건
 

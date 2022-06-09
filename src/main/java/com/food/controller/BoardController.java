@@ -68,6 +68,7 @@ public class BoardController {
     @GetMapping(value = "/detail")
     public String boardDtl(Model model, @RequestParam Long id){
         Board board = boardService.getBoardDtl(id);
+        boardService.updateView(id);
         model.addAttribute("boardDetail",board);
         log.info("******** 상세화면 접속완료 *******");
         return "board/boardDetail";

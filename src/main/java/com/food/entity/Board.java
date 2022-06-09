@@ -28,6 +28,8 @@ public class Board {
 
    private LocalDateTime regTime;
 
+   private int hit;
+
     public static Board createBoard(BoardFormDto boardFormDto) {
         Board board = new Board();
         board.setTitle(boardFormDto.getTitle());

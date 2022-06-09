@@ -26,4 +26,9 @@ public class BoardService {
     public Board getBoardDtl(Long id) {
         return boardRepository.getBoardDtl(id);
     }
+
+    @Transactional
+    public int updateView(Long id) {
+        return boardRepository.updateView(id);
+    }
 }
