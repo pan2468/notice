@@ -4,10 +4,8 @@ import com.food.dto.BoardFormDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -29,7 +27,6 @@ public class Board {
     private String username;
 
    private LocalDateTime regTime;
-
 
     public static Board createBoard(BoardFormDto boardFormDto) {
         Board board = new Board();
