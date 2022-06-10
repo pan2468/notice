@@ -5,12 +5,15 @@ import com.food.entity.Board;
 import com.food.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class BoardController {
     private final BoardService boardService;
 
     /**
-     * 게시판 목록화면 출력
+     * 게시글 목록화면 출력
      **/
     @GetMapping("/list")
     public String list(Model model){
@@ -34,7 +37,7 @@ public class BoardController {
 
 
     /**
-     * 게시판 등록화면
+     * 게시글 등록화면
      **/
     @GetMapping("/write")
     public String write(Model model){
@@ -45,7 +48,7 @@ public class BoardController {
 
 
     /**
-     * 게시판 등록
+     * 게시글 등록
      **/
     @PostMapping("/write")
     public String reg(@Valid BoardFormDto boardFormDto, BindingResult bindingResult, Model model){
@@ -64,7 +67,7 @@ public class BoardController {
     }
 
     /**
-     * 게시판 상세화면 출력
+     * 게시글 상세화면 출력
      **/
     @GetMapping(value = "/detail")
     public String boardDtl(Model model, @RequestParam Long id){
@@ -75,7 +78,9 @@ public class BoardController {
         return "board/boardDetail";
     }
 
-
+    /**
+     * 게시글 수정
+     **/
     @PostMapping("/update")
     public String updateBoard(@ModelAttribute("boardDetail") BoardFormDto boardFormDto){
         Board board = new Board();
@@ -90,4 +95,13 @@ public class BoardController {
         return "redirect:/board/list";
     }
 
+    /**
+     * 게시글 삭제
+     **/
+    @GetMapping("/delete")
+    public String deleteBoard(@RequestParam Long id){
+
+        boardService.deleteBoard(id);
+        return "redirect:/board/list";
+    }
 }
