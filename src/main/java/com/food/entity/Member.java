@@ -18,19 +18,19 @@ public class Member {
     @Id
     @Column(name = "member_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id; // No
 
-    private String name;
+    private String name; //회원이름
 
     @Column(unique = true)
-    private String email;
+    private String email; //이메일
 
-    private String password;
+    private String password; //비밀번호
 
-    private String address;
+    private String address; //주소
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role; //권한
 
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder){
         Member member = new Member();
@@ -42,9 +42,4 @@ public class Member {
         member.setRole(Role.USER);
         return member;
     }
-
-
-
-
-
 }

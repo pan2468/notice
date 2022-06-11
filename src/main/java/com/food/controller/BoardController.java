@@ -5,15 +5,15 @@ import com.food.entity.Board;
 import com.food.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -29,8 +29,14 @@ public class BoardController {
      * 게시글 목록화면 출력
      **/
     @GetMapping("/list")
-    public String list(Model model){
-        List<Board> boards = boardService.findAll();
+    public String list(Model model,@PageableDefault(size = 2) Pageable pageable,
+                       @RequestParam(required = false,defaultValue = "") String searchText){
+        //List<Board> boards = boardService.findAll();
+        Page<Board> boards = boardService.findAll(pageable);
+        int startPage = Math.max(1,boards.getPageable().getPageNumber() - 4);
+        int endPage = Math.min(boards.getTotalPages(),boards.getPageable().getPageNumber() + 4);
+        model.addAttribute("startPage",startPage);
+        model.addAttribute("endPage",endPage);
         model.addAttribute("boards",boards);
         return "board/boardList";
     }

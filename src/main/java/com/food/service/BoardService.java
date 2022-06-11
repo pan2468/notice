@@ -3,11 +3,12 @@ package com.food.service;
 import com.food.entity.Board;
 import com.food.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.List;
 
 @Service
 @Transactional
@@ -20,8 +21,8 @@ public class BoardService {
         return boardRepository.save(board);
     }
 
-    public List<Board> findAll() {
-        return boardRepository.findAll();
+    public Page<Board> findAll(Pageable pageable) {
+        return boardRepository.findAll(pageable);
     }
 
     public Board getBoardDtl(Long id) {

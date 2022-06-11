@@ -18,17 +18,21 @@ public class Board {
     @Id
     @Column(name = "board_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id;                //No
 
-    private String title;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
-    private String content;
+    private String title;           //제목
 
-    private String username;
+    private String content;         //내용
 
-   private LocalDateTime regTime;
+    private String username;        //작성자
 
-   private int hit;
+   private LocalDateTime regTime;   //등록일자
+
+   private int hit;                 // 조회수
 
     public static Board createBoard(BoardFormDto boardFormDto) {
         Board board = new Board();
