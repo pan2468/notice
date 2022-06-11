@@ -9,3 +9,6 @@
 + RDBMS
 + Mysql
 
+## IDE
++ Intelij Comunity
+
