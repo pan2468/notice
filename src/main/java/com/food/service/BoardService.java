@@ -1,5 +1,6 @@
 package com.food.service;
 
+import com.food.dto.BoardSearchDto;
 import com.food.entity.Board;
 import com.food.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +22,8 @@ public class BoardService {
         return boardRepository.save(board);
     }
 
-    public Page<Board> findAll(Pageable pageable) {
-        return boardRepository.findAll(pageable);
+    public Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto) {
+        return boardRepository.findAll(pageable,boardSearchDto);
     }
 
     public Board getBoardDtl(Long id) {

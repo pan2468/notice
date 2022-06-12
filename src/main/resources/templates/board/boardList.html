@@ -13,8 +13,21 @@
 	<div class="container">
 		<h3>점심 뭐 먹을래?</h3>
 		<p>점심 추천 메뉴 입니다.</p>
-		<form>
-			<input type="text" name="" class="form-control search" id="search" placeholder="메뉴를 검색하세요." src="/search.png"/>	
+		<form th:action="@{/board/list}" role="form" method="get" class="row g-3 search" th:object="${boardSearchDto}">
+			<div class="col-auto select">
+				<select class="form-select" aria-label="Default select example" th:field="*{searchBy}">
+					<option value="">전체</option>
+					<option value="T">제목</option>
+					<option value="C">내용</option>
+					<option value="TC">제목 + 내용</option>
+				</select>
+			</div>
+			<div class="col-auto">
+			  <input type="text" class="form-control search-input" id="" th:field="*{searchQuery}" placeholder="검색어를 입력하세요">
+			</div>
+			<div class="col-auto">
+			  <button type="submit" class="btn btn-primary mb-3 search-button">검색</button>
+			</div>
 		</form>
 		<table class="table caption-top">
 		  	<tr class="tr">

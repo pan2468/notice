@@ -1,6 +1,7 @@
 package com.food.controller;
 
 import com.food.dto.BoardFormDto;
+import com.food.dto.BoardSearchDto;
 import com.food.entity.Board;
 import com.food.service.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Log4j2
 @Controller
@@ -29,10 +29,11 @@ public class BoardController {
      * 게시글 목록화면 출력
      **/
     @GetMapping("/list")
-    public String list(Model model,@PageableDefault(size = 2) Pageable pageable,
+    public String list(Model model, @PageableDefault(size = 2) Pageable pageable
+                        ,BoardSearchDto boardSearchDto,
                        @RequestParam(required = false,defaultValue = "") String searchText){
         //List<Board> boards = boardService.findAll();
-        Page<Board> boards = boardService.findAll(pageable);
+        Page<Board> boards = boardService.findAll(pageable,boardSearchDto);
         int startPage = Math.max(1,boards.getPageable().getPageNumber() - 4);
         int endPage = Math.min(boards.getTotalPages(),boards.getPageable().getPageNumber() + 4);
         model.addAttribute("startPage",startPage);
@@ -40,7 +41,6 @@ public class BoardController {
         model.addAttribute("boards",boards);
         return "board/boardList";
     }
-
 
     /**
      * 게시글 등록화면
@@ -50,8 +50,6 @@ public class BoardController {
         model.addAttribute("boardFormDto", new BoardFormDto());
         return "board/boardWrite";
     }
-
-
 
     /**
      * 게시글 등록
