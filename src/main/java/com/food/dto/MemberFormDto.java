@@ -1,5 +1,6 @@
 package com.food.dto;
 
+import com.food.constant.Role;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -26,4 +27,6 @@ public class MemberFormDto {
 
     @NotEmpty(message = "주소는 필수 입력 값입니다.")
     private String address;
+
+    private Role role;  // 권한 설정
 }

@@ -32,8 +32,10 @@
 				<input type="text" class="form-control" th:field="*{username}" id="form-write" placeholder="작성자를 입력해주세요.">
 				<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
 			</div>
-			<button type="submit" class="btn btn-primary" id="reg">등록</button>
-            <a type="button" class="btn btn-danger" th:href="@{/board/list}" id="cacel">목록</a>
+			<div class="text-start">
+				<button type="submit" class="btn btn-primary" id="reg">등록</button>
+            	<a type="button" class="btn btn-danger" th:href="@{/board/list}" id="cancel">목록</a>
+			</div>
 		</form>
 	</div>
 </body>

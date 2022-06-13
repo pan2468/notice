@@ -25,11 +25,4 @@ public class BoardFormDto {
 
     private int hit; // 조회수 증가
 
-    //private String searchBy;    //검색조건
-
-    //private String searchQuery = "";  //검색어 입력
-
-//    @Enumerated(EnumType.STRING)
-//    private Role role;
-
 }

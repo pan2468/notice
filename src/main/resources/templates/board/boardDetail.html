@@ -79,10 +79,11 @@
 			<input type="text" class="form-control" th:field="*{hit}"  id="form-hit" readonly>
 			<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
 		</div>
-		<button class="btn btn-primary update" id="reg" onclick="modify">수정</button>
-		<!-- <button class="btn btn-primary delete" th:data-id="${boardDetail.id}" onclick="deleteBoard(this)">삭제</button> -->
-		<a type="button" class="btn btn-primary delete" th:href="@{/board/delete(id=${boardDetail.id})}">삭제</a>
-		<a type="button" class="btn btn-danger" th:href="@{/board/list}" id="cacel">목록</a>
+		<div class="text-start">
+			<button class="btn btn-primary update" id="reg" onclick="modify" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">수정</button>
+			<a type="button" class="btn btn-primary delete" th:href="@{/board/delete(id=${boardDetail.id})}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">삭제</a>
+			<a type="button" class="btn btn-danger" th:href="@{/board/list}" id="cancel">목록</a>
+		</div>	
 	</form>
 </div>
 </body>

@@ -22,7 +22,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         //http.csrf().disable();
-        http.formLogin()
+        http
+                .formLogin()
                 .loginPage("/members/login")
                 .defaultSuccessUrl("/board/list")
                 .usernameParameter("email")
@@ -30,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/members/logout"))
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/members/login");
+
     }
 
     @Bean

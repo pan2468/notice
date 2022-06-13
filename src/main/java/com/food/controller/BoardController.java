@@ -3,7 +3,10 @@ package com.food.controller;
 import com.food.dto.BoardFormDto;
 import com.food.dto.BoardSearchDto;
 import com.food.entity.Board;
+import com.food.entity.Member;
+import com.food.repository.MemberRepository;
 import com.food.service.BoardService;
+import com.food.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -24,6 +27,7 @@ import java.time.LocalDateTime;
 public class BoardController {
 
     private final BoardService boardService;
+    private final MemberRepository memberRepository;
 
     /**
      * 게시글 목록화면 출력
@@ -46,8 +50,13 @@ public class BoardController {
      * 게시글 등록화면
      **/
     @GetMapping("/write")
-    public String write(Model model){
+    public String write(Model model) throws Exception{
+
+        //Member member = (Member) memberRepository.findAll();
+
+        //model.addAttribute("member",member);
         model.addAttribute("boardFormDto", new BoardFormDto());
+
         return "board/boardWrite";
     }
 

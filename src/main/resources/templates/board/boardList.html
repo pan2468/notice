@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layouts/layout1}">
 <head>
 	<meta charset="UTF-8">
@@ -22,11 +23,8 @@
 					<option value="TC">제목 + 내용</option>
 				</select>
 			</div>
-			<div class="col-auto">
-			  <input type="text" class="form-control search-input" id="" th:field="*{searchQuery}" placeholder="검색어를 입력하세요">
-			</div>
-			<div class="col-auto">
-			  <button type="submit" class="btn btn-primary mb-3 search-button">검색</button>
+			<div class="col-auto search-input">
+				<input type="text" class="form-control" id="" th:field="*{searchQuery}" placeholder="검색어를 입력하세요">
 			</div>
 		</form>
 		<table class="table caption-top">
@@ -65,10 +63,10 @@
             </ul>
         </nav>
 		<div class="text-end">
-            <a type="button" class="btn btn-outline-primary blue" th:href="@{/members/login}">로그인</a>
-            <a type="button" class="btn btn-danger red" th:href="@{/board/write}">글쓰기</a>
-        </div>
-
+			<a type="button" class="btn btn-outline-primary blue" href="/members/logout" sec:authorize="isAuthenticated()">로그아웃</a>
+			<a type="button" class="btn btn-outline-primary blue" th:href="@{/members/login}" sec:authorize="isAnonymous()">로그인</a>
+			<a type="button" class="btn btn-danger red" th:href="@{/board/write}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">글쓰기</a>
+		</div>
 	</div>
 </body>
 </html>
