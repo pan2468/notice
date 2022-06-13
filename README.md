@@ -11,7 +11,7 @@
 
 ## IDE
 + Intelij Comunity
-+ 
++ Visual Stodio Code
 
 ## 기간
 2022-06-03 ~ 2022-06-13 
