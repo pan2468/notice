@@ -65,8 +65,14 @@
 		</div>
 
 		<div class="mb-3">
+			<label class="form-write">메뉴</label>
+			<input type="text" class="form-control" th:field="*{menu}"  id="form-write" placeholder="메뉴를 입력해주세요." readonly>
+			<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
+		</div>
+
+		<div class="mb-3">
 			<label class="form-write">작성자</label>
-			<input type="text" class="form-control" th:field="*{username}"  id="form-write" placeholder="작성자를 입력해주세요." readonly>
+			<input type="text" class="form-control" th:field="*{createBy}"  id="form-write" placeholder="작성자를 입력해주세요." readonly>
 			<!-- <p th:if="${#fields.hasErrors('write')}" th:errors="*{write}" class="fieldError">Incorrect data</p> -->
 		</div>
 		<div class="mb-3">

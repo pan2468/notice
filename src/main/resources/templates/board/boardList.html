@@ -40,7 +40,7 @@
 				<td th:text="${board.id}"></td>
 				<td><a th:text="${board.title}" th:href="@{/board/detail(id=${board.id})}">Title</a></td>
 				<td th:text="${board.content}"></td>
-				<td th:text="${board.username}"></td>
+				<td th:text="${board.createBy}"></td>
 				<td th:text="${board.regTime}"></td>
 			    <td th:text="${board.hit}"></td>
 		  	</tr>

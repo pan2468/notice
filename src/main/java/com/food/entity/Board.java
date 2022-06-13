@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "board")
 @Getter @Setter
 @ToString
-public class Board {
+public class Board extends BaseEntity{
 
     @Id
     @Column(name = "board_id")
@@ -30,15 +30,15 @@ public class Board {
 
     private String username;        //작성자
 
-   private LocalDateTime regTime;   //등록일자
+    private String menu;            //메뉴
 
-   private int hit;                 // 조회수
+    private int hit;                // 조회수
 
     public static Board createBoard(BoardFormDto boardFormDto) {
         Board board = new Board();
         board.setTitle(boardFormDto.getTitle());
         board.setContent(boardFormDto.getContent());
-        board.setUsername(boardFormDto.getUsername());
+        board.setMenu(boardFormDto.getMenu());
         board.setRegTime(LocalDateTime.now());
         return board;
     }
@@ -47,8 +47,8 @@ public class Board {
         Board board = new Board();
         board.setTitle(boardFormDto.getTitle());
         board.setContent(boardFormDto.getContent());
-        board.setUsername(boardFormDto.getUsername());
-        board.setRegTime(LocalDateTime.now());
+        board.setMenu(boardFormDto.getMenu());
+        board.setUpdateTime(LocalDateTime.now());
         return board;
     }
 

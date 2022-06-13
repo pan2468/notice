@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Log4j2
 @Controller
@@ -52,9 +53,9 @@ public class BoardController {
     @GetMapping("/write")
     public String write(Model model) throws Exception{
 
-        //Member member = (Member) memberRepository.findAll();
+        List<Member> members = memberRepository.findAll();
 
-        //model.addAttribute("member",member);
+        model.addAttribute("members",members);
         model.addAttribute("boardFormDto", new BoardFormDto());
 
         return "board/boardWrite";
@@ -100,8 +101,8 @@ public class BoardController {
         board.setId(boardFormDto.getId());
         board.setTitle(boardFormDto.getTitle());
         board.setContent(boardFormDto.getContent());
-        board.setUsername(boardFormDto.getUsername());
-        board.setRegTime(LocalDateTime.now());
+        board.setMenu(boardFormDto.getMenu());
+        board.setUpdateTime(LocalDateTime.now());
 
         boardService.saveBoard(board);
 

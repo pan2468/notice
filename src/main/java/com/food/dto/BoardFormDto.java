@@ -18,10 +18,8 @@ public class BoardFormDto {
     @NotEmpty(message = "내용은 필수 입력 값입니다.")
     private String content;
 
-    @NotBlank(message = "작성자 필수 입력 값 입니다.")
-    private String username;
-
-    private LocalDateTime regTime;
+    @NotBlank(message = "메뉴이름 필수 입력 값 입니다.")
+    private String menu;    // 메뉴
 
     private int hit; // 조회수 증가
 
