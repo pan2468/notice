@@ -8,7 +8,7 @@
 + RDBMS: Mysql
 
 
-## IDE & Tool ![Intelij IDEA](https://img.shields.io/badge/Intelij IDEA-000000.svg?&style=for-the-badge&logo=Intelij IDEA&logoColor=white)
+## IDE & Tool ![IntelijIDEA](https://img.shields.io/badge/IntelijIDEA-000000.svg?&style=for-the-badge&logo=IntelijIDEA&logoColor=white)
 + Intelij
 + VS Code
 </br>
