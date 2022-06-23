@@ -17,7 +17,7 @@
 </br>
 
 ## 🖥 프로젝트 사용 메뉴얼
-<img src = "https://user-images.githubusercontent.com/58936137/175338625-63efdb48-89e7-41dc-8db7-713ae63a1777.png" width="1020px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175338625-63efdb48-89e7-41dc-8db7-713ae63a1777.png" width="820px" height="320px">
 
 ### 회원가입
 + 기능 설명: 이름, 이메일, 비밀번호, 주소 입력후 회원가입 버튼 클릭
