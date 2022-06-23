@@ -16,7 +16,7 @@
 ## 🖥 프로젝트 사용 메뉴얼
 <img src = "https://user-images.githubusercontent.com/58936137/175238260-eddfd4bb-d6c2-49e5-915d-e69d6e013fd7.png" width="320px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png" width="320px" height="320px"></br>
 
-<img src = "https://user-images.githubusercontent.com/58936137/175243599-6ab4f5b4-f8b4-47fe-98ed-8d27aa29308a.png" width="320px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="650px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
+<img src = "https://user-images.githubusercontent.com/58936137/175243599-6ab4f5b4-f8b4-47fe-98ed-8d27aa29308a.png" width="320px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="450px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
 
 
 
