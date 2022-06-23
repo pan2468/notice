@@ -7,6 +7,7 @@
 + Back-End: Java, SpringBoot, JPA
 + BuildTool: Gradle
 + RDBMS: Mysql
++ SpringSecurity 로그인 검증
 
 
 
