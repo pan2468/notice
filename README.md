@@ -14,6 +14,12 @@
 </br>
 
 ## 🖥 프로젝트 사용 메뉴얼
+<img src = "https://user-images.githubusercontent.com/58936137/175238260-eddfd4bb-d6c2-49e5-915d-e69d6e013fd7.png" width="320px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png" width="320px" height="320px"></br>
+<img src = "https://user-images.githubusercontent.com/58936137/175243599-6ab4f5b4-f8b4-47fe-98ed-8d27aa29308a.png" width="320px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="650px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
+
 ### 회원가입
 + 기능 설명: 이름, 이메일, 비밀번호, 주소 입력후 회원가입 버튼 클릭
 + JpaRepository 인터페이스에서 save() 메소드를 활용하여 INSERT 등록
@@ -40,14 +46,6 @@
 + 수정: 제목, 내용 부분 수정하여 수정버튼클릭 -> JpaRepository 인터페이스 save() 메소드 활용하여 INSERT 등록
 + 삭제: 삭제 버튼클릭 -> JpaRepository 인터페이스 delete() 메소드 활용   
 <img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
-
-
-
-
-
-
-
-
 
 
 ## 📆 기간
