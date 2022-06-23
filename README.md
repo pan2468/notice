@@ -1,15 +1,12 @@
 # Spring Boot JPA 개인 프로젝트 
 
-## 기술스택
-+ Java 11
-+ Spring Boot
-+ JPA 
+## Skills
++ Front-End: HTML5, Thymeleaf, CSS, JS
++ Back-End: Java, SpringBoot, JPA
++ BuildTool: Gradle
++ RDBMS: Mysql
 
-## Database
-+ RDBMS
-+ Mysql
-
-## IDE
+## IDE & Tool
 + Intelij Comunity
 + Visual Stodio Code
 
