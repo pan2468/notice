@@ -7,6 +7,7 @@
 + BuildTool: Gradle
 + RDBMS: Mysql
 + 로그인 SpringSecurity 적용
++ #7952B3 Bootstrap 적용
 
 ## IDE & Tool
 + Intelij Comunity
