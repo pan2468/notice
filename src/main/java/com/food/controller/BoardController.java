@@ -6,7 +6,6 @@ import com.food.entity.Board;
 import com.food.entity.Member;
 import com.food.repository.MemberRepository;
 import com.food.service.BoardService;
-import com.food.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -35,12 +34,13 @@ public class BoardController {
      **/
     @GetMapping("/list")
     public String list(Model model, @PageableDefault(size = 2) Pageable pageable
-                        ,BoardSearchDto boardSearchDto,
-                       @RequestParam(required = false,defaultValue = "") String searchText){
-        //List<Board> boards = boardService.findAll();
+                        ,BoardSearchDto boardSearchDto
+                        ,@RequestParam(required = false,defaultValue = "") String searchText){
+
         Page<Board> boards = boardService.findAll(pageable,boardSearchDto);
         int startPage = Math.max(1,boards.getPageable().getPageNumber() - 4);
         int endPage = Math.min(boards.getTotalPages(),boards.getPageable().getPageNumber() + 4);
+
         model.addAttribute("startPage",startPage);
         model.addAttribute("endPage",endPage);
         model.addAttribute("boards",boards);
