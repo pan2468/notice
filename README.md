@@ -1,7 +1,7 @@
 # Spring Boot JPA 개인 프로젝트 
 + 개인 프로젝트 로그인, 회원가입, 게시판(공지사항) Java, SpringBoot, JPA, Gradle 제작으로 개발 구축
 
-## Skills
+:+1: ## Skills
 + Front-End: HTML5, CSS, JS, Thymeleaf
 + Back-End: Java, SpringBoot, JPA
 + BuildTool: Gradle
