@@ -22,8 +22,7 @@
 ### 로그인 페이지
 + 기능 설명: 이메일, 비밀번호 입력후 로그인 버튼 클릭후 검증하여 공지사항으로 이동 
 + SpringSecurity 보안프레임워크 활용하여 Email, Password 파라미터 값을 받아 검증하여 redirect 이동
-
-![image](https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png)
+<img src = "https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png" width="320px" height="320px">
 
 
 ## 📆 기간
