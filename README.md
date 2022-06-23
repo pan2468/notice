@@ -17,7 +17,7 @@
 </br>
 
 ## 🖥 프로젝트 사용 메뉴얼
-### 프로젝트 실행 
+### 프로젝트 실행순서 
 <img src = "https://user-images.githubusercontent.com/58936137/175338625-63efdb48-89e7-41dc-8db7-713ae63a1777.png" width="820px" height="320px">
 
 ### 회원가입
