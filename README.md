@@ -8,7 +8,7 @@
 + RDBMS: Mysql
 
 
-## IDE & Tool ![IntelijIDEA](https://img.shields.io/badge/IntelijIDEA-000000.svg?&style=for-the-badge&logo=IntelijIDEA&logoColor=white)
+## IDE & Tool 💻
 + Intelij
 + VS Code
 </br>
