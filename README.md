@@ -13,7 +13,7 @@
 + VS Code
 </br>
 
-## 🖥 프로젝트 실행순서
+## 🖥 프로젝트 사용 메뉴얼
 <img src = "https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png" width="320px" height="320px">
 + 이름,이메일,아이디,전화번호,주소 입력후 회원가입 버튼클릭후 Insert
 
