@@ -43,7 +43,7 @@
 
 ### 게시판(수정)
 + 수정: 제목, 내용 부분 수정하여 수정버튼클릭 -> JpaRepository 인터페이스 save() 메소드 활용하여 INSERT 등록
-<img src = "https://user-images.githubusercontent.com/58936137/175255374-86b803b2-62d0-4927-9ae5-5fc416477f01.png" width="320px" height="420px"><img src = "https://user-images.githubusercontent.com/58936137/175255613-30aca4a4-b0ba-4270-a055-27e315fa49d5.png" width="650px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175255374-86b803b2-62d0-4927-9ae5-5fc416477f01.png" width="320px" height="420px"><img src = "https://user-images.githubusercontent.com/58936137/175255613-30aca4a4-b0ba-4270-a055-27e315fa49d5.png" width="450px" height="320px">
 
 ### 게시판(삭제)
 + 삭제: 삭제 버튼클릭 -> JpaRepository 인터페이스 delete() 메소드 활용
