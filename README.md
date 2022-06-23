@@ -17,8 +17,7 @@
 ### 회원가입
 + 기능 설명: 이름, 이메일, 비밀번호, 주소 입력후 회원가입 버튼 클릭
 + JpaRepository 인터페이스에서 save() 메소드를 활용하여 Insert 등록
-<img src = "https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png" width="320px" height="320px">
-
+<img src = "https://user-images.githubusercontent.com/58936137/175238260-eddfd4bb-d6c2-49e5-915d-e69d6e013fd7.png" width="320px" height="320px">
 
 ## 📆 기간
 2022-06-03 ~ 2022-06-13 
