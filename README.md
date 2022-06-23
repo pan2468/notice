@@ -29,13 +29,19 @@
 + JpaRepository 인터페이스 save() 메소드를 활용하여 INSERT 등록
 <img src = "https://user-images.githubusercontent.com/58936137/175243599-6ab4f5b4-f8b4-47fe-98ed-8d27aa29308a.png" width="320px" height="320px">
 
-
-
-
 ### 게시판(공지사항)
 + 기능 설명: No, 제목, 내용, 작성자, 작성일, 조회수 목록 출력
 + JpaRepository 인터페이스에서 findAll() 메소드 활용하여 SELECT 목록 출력
 <img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="650px" height="320px">
+
+### 게시판(상세화면)
++ 공지사항 목록 제목 클릭후 -> 상세 목록 정보 출력
++ 목록: 목록 버튼 클릭후 redirect 공지사항으로 이동
++ 수정: 제목, 내용 부분 수정하여 수정버튼클릭 -> JpaRepository 인터페이스 save() 메소드 활용하여 INSERT 등록
++ 삭제: 삭제 버튼클릭 -> JpaRepository 인터페이스 delete() 메소드 활용   
+<img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
+
+
 
 
 
