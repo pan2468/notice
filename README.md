@@ -47,7 +47,12 @@
 
 ### 게시판(삭제)
 + 삭제: 삭제 버튼클릭 -> JpaRepository 인터페이스 delete() 메소드 활용
-+ <img src = "https://user-images.githubusercontent.com/58936137/175256003-5c100837-d35d-49ee-8b54-edf902cc194b.png" width="320px" height="420px"><img src = "https://user-images.githubusercontent.com/58936137/175256234-74ea621d-d379-4c78-9bd2-0845c5b9a8ab.png" width="650px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175256003-5c100837-d35d-49ee-8b54-edf902cc194b.png" width="320px" height="420px"><img src = "https://user-images.githubusercontent.com/58936137/175256234-74ea621d-d379-4c78-9bd2-0845c5b9a8ab.png" width="650px" height="320px">
+
+### 게시판(검색 활용)
++ 검색창에 제목, 내용, 제목 + 내용 검색하기
++ QueryDSL 동적쿼리 작성으로 JpaRepository 인터페이스 활용하여 findAll() 목록 출력
+<img src = "https://user-images.githubusercontent.com/58936137/175257512-867022a4-2f7f-4a40-8964-77bdfdfb511e.png" width="650px" height="320px">
 
 ## 📆 개발 기간
 2022-06-03 ~ 2022-06-13 
