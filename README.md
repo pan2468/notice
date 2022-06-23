@@ -44,6 +44,6 @@
 <img src = "https://user-images.githubusercontent.com/58936137/175244692-92afcc29-2193-416e-a2e9-b550e8843229.png" width="320px" height="420px">
 
 
-## 📆 기간
+## 📆 개발 기간
 2022-06-03 ~ 2022-06-13 
 
