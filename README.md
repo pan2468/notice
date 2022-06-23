@@ -19,6 +19,13 @@
 + JpaRepository 인터페이스에서 save() 메소드를 활용하여 Insert 등록
 <img src = "https://user-images.githubusercontent.com/58936137/175238260-eddfd4bb-d6c2-49e5-915d-e69d6e013fd7.png" width="320px" height="320px">
 
+### 로그인 페이지
++ 기능 설명: 이메일, 비밀번호 입력후 로그인 버튼 클릭후 검증하여 공지사항으로 이동 
++ SpringSecurity 보안프레임워크 활용하여 Email, Password 파라미터 값을 받아 검증하여 redirect 이동
+
+![image](https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png)
+
+
 ## 📆 기간
 2022-06-03 ~ 2022-06-13 
 
