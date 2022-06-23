@@ -52,7 +52,8 @@
 ### 게시판(검색 활용)
 + 검색창에 제목, 내용, 제목 + 내용 검색하기
 + QueryDSL 동적쿼리 작성으로 JpaRepository 인터페이스 활용하여 findAll() 목록 출력
-<img src = "https://user-images.githubusercontent.com/58936137/175257512-867022a4-2f7f-4a40-8964-77bdfdfb511e.png" width="450px" height="320px"><img src = "https://user-images.githubusercontent.com/58936137/175257855-150b0800-4c71-4f0a-a3c7-8deeb06c41ef.png" width="450px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175257512-867022a4-2f7f-4a40-8964-77bdfdfb511e.png" width="650px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175257855-150b0800-4c71-4f0a-a3c7-8deeb06c41ef.png" width="650px" height="320px">
 
 ## 📆 개발 기간
 2022-06-03 ~ 2022-06-13 
