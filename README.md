@@ -2,12 +2,7 @@
 + 개인 프로젝트 로그인, 회원가입, 게시판(공지사항) Java, SpringBoot, JPA, Gradle 제작으로 개발 구축
 
 ## Skills
-+ Front-End: HTML5, Thymeleaf, CSS, JS
-+ Back-End: Java, SpringBoot, JPA
-+ BuildTool: Gradle
-+ RDBMS: Mysql
-+ 로그인 SpringSecurity 적용
-+ #7952B3 Bootstrap 적용
+![Java](https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white)
 
 ## IDE & Tool
 + Intelij Comunity
