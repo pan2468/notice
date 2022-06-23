@@ -11,8 +11,8 @@
 
 
 ## 💻 IDE & Tool 
-+ Intelij
-+ VS Code
++ Intelij Community
++ Vsual Stodio Code
 </br>
 
 ## 🖥 프로젝트 사용 메뉴얼
