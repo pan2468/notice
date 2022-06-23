@@ -8,7 +8,7 @@
 + RDBMS: Mysql
 
 
-## IDE & Tool 💻
+## 💻 IDE & Tool 
 + Intelij
 + VS Code
 </br>
