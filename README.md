@@ -11,9 +11,7 @@
 ## IDE & Tool
 + Intelij
 + VS Code
-
-![image](https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png)
-<img src = "https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png" width="150px" height="150px">
+<img src = "https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png" width="350px" height="350px">
 
 
 ## 기간
