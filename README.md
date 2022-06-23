@@ -24,10 +24,21 @@
 + SpringSecurity 보안프레임워크 활용하여 Email, Password 파라미터 값을 받아 검증하여 redirect 이동
 <img src = "https://user-images.githubusercontent.com/58936137/175240393-73f1530a-a641-4ed9-851a-dfc13d64dc98.png" width="320px" height="320px">
 
+### 게시판(글쓰기)
++ 
++
+<img src = "https://user-images.githubusercontent.com/58936137/175243599-6ab4f5b4-f8b4-47fe-98ed-8d27aa29308a.png" width="320px" height="320px">
+
+
+
+
 ### 게시판(공지사항)
 + 기능 설명: No, 제목, 내용, 작성자, 작성일, 조회수 목록 출력
 + JpaRepository 인터페이스에서 findAll() 메소드 활용하여 List 목록 출력
-+ <img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="650px" height="320px">
+<img src = "https://user-images.githubusercontent.com/58936137/175242728-865c4062-dfe9-4705-bca4-77a3e447dd64.png" width="650px" height="320px">
+
+
+
 
 
 
