@@ -3,10 +3,11 @@
 + 로그인, 회원가입, 목록, 글작성, 상세화면, 수정, 삭제, 페이징, 검색
 
 ## :+1: Skills
-+ Front-End: HTML5, CSS, JS, Thymeleaf
++ Front-End: HTML5, CSS, JS, Thymeleaf,Bootstrap
 + Back-End: Java, SpringBoot, JPA
 + BuildTool: Gradle
 + RDBMS: Mysql
+
 
 
 ## 💻 IDE & Tool 
