@@ -27,7 +27,7 @@
 ### 게시판(공지사항)
 + 기능 설명: No, 제목, 내용, 작성자, 작성일, 조회수 목록 출력
 + JpaRepository 인터페이스에서 findAll() 메소드 활용하여 List 목록 출력
-+ <img src = "https://user-images.githubusercontent.com/58936137/175241744-6918013d-5821-4ea1-9d99-3fade6aa30a0.png" width="450px" height="320px">
++ <img src = "https://user-images.githubusercontent.com/58936137/175241744-6918013d-5821-4ea1-9d99-3fade6aa30a0.png" width="650px" height="320px">
 
 
 
