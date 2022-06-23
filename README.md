@@ -17,6 +17,6 @@
 <img src = "https://user-images.githubusercontent.com/58936137/175233423-7a8f6387-3eae-45f3-bb3d-4b41ae8deb98.png" width="320px" height="320px">
 
 
-## 기간
+## 📆 기간
 2022-06-03 ~ 2022-06-13 
 
