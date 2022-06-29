@@ -12,8 +12,8 @@
 </head>
 <body>
 	<div class="container">
-		<h3>점심 뭐 먹을래?</h3>
-		<p>점심 추천 메뉴 입니다.</p>
+		<h3>공지사항</h3>
+		<p>공지사항 목록 입니다.</p>
 		<form th:action="@{/board/list}" role="form" method="get" class="row g-3 search" th:object="${boardSearchDto}">
 			<div class="col-auto select">
 				<select class="form-select" aria-label="Default select example" th:field="*{searchBy}">
