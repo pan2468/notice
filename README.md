@@ -1,19 +1,19 @@
 
-# :pushpin: goQuality
+# 👉 회원 및 공지사항
 >고퀄리티 개발 컨텐츠 공유 서비스  
->https://go-quality.dev  
+>https://pan2468.tistory.com/category/Toy%20Project  
 
 </br>
 
 ## 1. 제작 기간 & 참여 인원
-- 2019년 2월 18일 ~ 4월 5일
+- 2022년 6월 3일 ~ 6월 13일
 - 개인 프로젝트
 
 </br>
 
 ## 2. 사용 기술
 #### `Back-end`
-  - Java 8
+  - Java 11
   - Spring Boot 2.3
   - Gradle
   - Spring Data JPA
