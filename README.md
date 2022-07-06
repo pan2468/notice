@@ -16,7 +16,8 @@
 ## ERD 
 ERD 작성
 ## DDD
-미작성
+![image](https://user-images.githubusercontent.com/58936137/177618013-b31bfbb0-9482-4243-8ea0-fb2a321808bc.png)
+<img src="https://user-images.githubusercontent.com/58936137/177618013-b31bfbb0-9482-4243-8ea0-fb2a321808bc.png" width="300px">
 ## 핵심 기능
 핵심 기능 작성
 
