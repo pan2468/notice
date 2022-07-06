@@ -3,7 +3,7 @@
 + Toy Project: https://pan2468.tistory.com/category/Toy%20Project
 ### 제작기간, 참여인원
 + 제작기간: 2022.06.03 ~ 2022.06.13
-+ 참여이원: 개인프로젝트
++ 참여인원: 개인프로젝트
 ### 사용기술 (기술스택)
 + Java 11
 + SpringBoot
