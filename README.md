@@ -15,8 +15,6 @@
 + MySQL
 ## ERD 
 ERD 작성
-## DDD
-<img src="https://user-images.githubusercontent.com/58936137/177618548-5dd4ce02-2b77-4cbb-abf4-34982ef615f0.png" width="500px" height="350px">
 
 ## 핵심 기능
 핵심 기능 작성
