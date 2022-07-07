@@ -31,7 +31,6 @@
 <div markdown="1">
 
 ~~~java
-   SecurityConfig.java
 package com.food.config;
 
 import com.food.service.MemberService;
@@ -79,7 +78,39 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(memberService).passwordEncoder(passwordEncoder());
     }
 }
+~~~
+~~~
+   <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}">
 
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="layout1.css" th:href="@{/css/layout1.css}" rel="stylesheet">
+</head>
+
+
+<div class="container">
+	<h3>로그인 페이지</h3>
+	<a href="/members/project"><p>회원 가입 후 <br> 로그인 하시면 공지사항으로 이동</p></a>
+	<form role="form" method="post" action="/members/login">
+		<div class="mb-3">
+			<input type="email" name="email" class="form-control" id="email" placeholder="이메일을 입력해주세요">
+		</div>
+		<div class="mb-3">
+			<input type="password" name="password" id="password" class="form-control" placeholder="비밀번호 입력">
+		</div>
+		<p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
+		<button class="btn btn-primary" id="login">로그인</button>
+		<button type="button" class="btn btn-danger" onClick="location.href='/members/new'" id="login-sign">회원가입</button>
+	</form>
+
+</div>
+
+
+</html>
 ~~~
 
 </div>
