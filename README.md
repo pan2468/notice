@@ -103,6 +103,7 @@ public interface BoardRepositoryCustom {
     Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto);
 }
 ~~~
+	
 ~~~java	
 import com.food.entity.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
