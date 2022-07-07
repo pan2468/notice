@@ -151,8 +151,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 </div>
 </details>
-- memberLoginForm.html 밑에 하단에 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"> 코드를 추가했습니다. 
-- 로그인 버튼 클릭 후 담아져 있던 세션 정보 값을 SecurityConfig 에서 인증 후 공지사항 페이지 화면으로 잘 넘어가는걸 알 수 있었습니다. 
++ memberLoginForm.html 밑에 하단에 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"> 코드를 추가했습니다. 
++ 로그인 버튼 클릭 후 담아져 있던 세션 정보 값을 SecurityConfig 에서 인증 후 공지사항 페이지 화면으로 잘 넘어가는걸 알 수 있었습니다. 
 
 ## 회고 / 느낀점
 미작성
