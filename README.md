@@ -38,6 +38,28 @@ plugins {
 - queryDslVersion = "5.0.0"
 - id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"	
 	
+~~~java
+dependencies {
+	implementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2-mvstore:1.4.199'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+}
+~~~	
+- implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+- implementation "com.querydsl:querydsl-apt:${queryDslVersion}"	
 	
 
 </div>
