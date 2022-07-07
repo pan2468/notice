@@ -282,7 +282,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 </div>
 </details>
 
-- 밑에 하단에 input 태그에 ${_csrf.parameterName}", ${_csrf.token} 값을 넣어 추가했습니다. 
+- 밑에 하단에 input 태그에 _csrf.parameterName, _csrf.token 값을 넣어 추가했습니다. 
 - 로그인 버튼 클릭 후 담아져 있던 세션 정보 값을 SecurityConfig 에서 인증 후 공지사항 페이지 화면으로 잘 넘어가는걸 알 수 있었습니다. 
 <details>
 <summary><b>개선된 코드</b></summary>
