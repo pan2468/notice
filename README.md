@@ -21,7 +21,7 @@
 <details>
 <summary><b>build.gradle</b></summary>
 <div markdown="1">
-~~~ build.gradle
+~~~ 
 buildscript {
 	ext {
 		queryDslVersion = "5.0.0"
