@@ -6,8 +6,7 @@
 + 참여인원: 개인프로젝트
 ### 사용기술 (기술스택)
 + Java 11
-+ SpringBoot
-+ Spring MVC
++ SpringBoot 2.7.0
 + Spring Security
 + Spring Data JPA
 + QueryDsl
