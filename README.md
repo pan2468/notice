@@ -114,6 +114,18 @@ public interface BoardRepository extends JpaRepository<Board,Long>, QuerydslPred
 }
 ~~~
 - BoardRepositoryCustom 인터페이스를 상속을 받으면 JpaRepository 인터페이스를 사용할 수 있습니다.  
+
+~~~java
+import com.food.dto.BoardSearchDto;
+import com.food.entity.Board;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+public interface BoardRepositoryCustom {
+
+    Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto);
+}
+~~~
 </div>
 </details>
 
