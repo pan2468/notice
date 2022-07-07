@@ -22,7 +22,7 @@
 ## 핵심 트러블슈팅 경험 
 
 - 가장 기억이 남았던 Error는 Spring Security 로그인 인증 이였습니다.  
-- 로그인 화면에서 Email, Password 파라미터 값을 SecurityConfig 에서 가로채서 인증이 성공이 되면 .defaultSuccessUrl("/board/list") 공지사항 페이지 화면으로 넘어가면 Spring Security 403 Forbidden Error가 발생되였습니다.
+- 로그인 화면에서 Email, Password 파라미터 값을 SecurityConfig 에서 가로채서 인증이 성공이 되면 .defaultSuccessUrl("/board/list") 공지사항 페이지 화면으로 넘어가지  Spring Security 403 Forbidden Error가 발생되였습니다.
    
 
 
@@ -106,49 +106,53 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		<button class="btn btn-primary" id="login">로그인</button>
 		<button type="button" class="btn btn-danger" onClick="location.href='/members/new'" id="login-sign">회원가입</button>
 	</form>
-
 </div>
-
-
 </html>
 ~~~
 
 </div>
 </details>
 
-- 이 때 카테고리(tag)로 게시물을 필터링 하는 경우,  
-각 게시물은 최대 3개까지의 카테고리(tag)를 가질 수 있어 해당 카테고리를 포함하는 모든 게시물을 질의해야 했기 때문에  
-- 아래 **개선된 코드**와 같이 QueryDSL을 사용하여 다소 복잡한 Query를 작성하면서도 페이징 처리를 할 수 있었습니다.
-
 <details>
 <summary><b>개선된 코드</b></summary>
 <div markdown="1">
 
-~~~java
-/**
- * 게시물 필터 (Tag Name)
- */
-@Override
-public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
+~~~
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}">
 
-    QueryResults<Post> results = queryFactory
-            .selectFrom(post)
-            .innerJoin(postTag)
-                .on(post.idx.eq(postTag.post.idx))
-            .innerJoin(tag)
-                .on(tag.idx.eq(postTag.tag.idx))
-            .where(tag.name.eq(tagName))
-            .orderBy(post.idx.desc())
-                .limit(pageable.getPageSize())
-                .offset(pageable.getOffset())
-            .fetchResults();
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="layout1.css" th:href="@{/css/layout1.css}" rel="stylesheet">
+</head>
 
-    return new PageImpl<>(results.getResults(), pageable, results.getTotal());
-}
+
+<div class="container">
+	<h3>로그인 페이지</h3>
+	<a href="/members/project"><p>회원 가입 후 <br> 로그인 하시면 공지사항으로 이동</p></a>
+	<form role="form" method="post" action="/members/login">
+		<div class="mb-3">
+			<input type="email" name="email" class="form-control" id="email" placeholder="이메일을 입력해주세요">
+		</div>
+		<div class="mb-3">
+			<input type="password" name="password" id="password" class="form-control" placeholder="비밀번호 입력">
+		</div>
+		<p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
+		<button class="btn btn-primary" id="login">로그인</button>
+		<button type="button" class="btn btn-danger" onClick="location.href='/members/new'" id="login-sign">회원가입</button>
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+	</form>
+</div>
+</html>
 ~~~
 
 </div>
 </details>
+- memberLoginForm.html 밑에 하단에 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"> 코드를 추가했습니다. 
+- 로그인 버튼 클릭 후 담아져 있던 세션 정보 값을 SecurityConfig 에서 인증 후 공지사항 페이지 화면으로 잘 넘어가는걸 알 수 있었습니다. 
 
 ## 회고 / 느낀점
 미작성
