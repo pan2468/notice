@@ -86,8 +86,43 @@ compileQuerydsl {
 }
 // querydsl 추가 끝
 ~~~
-	
+</div>
+</details>
 
+<details>
+<summary><b>BoardRepositoryCustom</b></summary>
+<div markdown="1">
+~~~java	
+import com.food.dto.BoardSearchDto;
+import com.food.entity.Board;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+public interface BoardRepositoryCustom {
+
+    Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto);
+}
+~~~
+~~~java	
+import com.food.entity.Board;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+import org.springframework.data.repository.query.Param;
+
+public interface BoardRepository extends JpaRepository<Board,Long>, QuerydslPredicateExecutor<Board>,BoardRepositoryCustom {
+
+    @Query("select b from Board b where b.id = :id")
+    Board getBoardDtl(@Param("id") Long id);
+
+    @Modifying
+    @Query("update Board b set b.hit = b.hit + 1 where b.id = :id")
+    int updateView(@Param("id") Long id);
+
+}
+~~~
+- BoardRepositoryCustom 인터페이스를 상속을 받으면 JpaRepository 인터페이스를 사용할 수 있습니다.  
 </div>
 </details>
 
@@ -104,7 +139,6 @@ compileQuerydsl {
 <div markdown="1">
 
 ~~~java
-package com.food.config;
 
 import com.food.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
