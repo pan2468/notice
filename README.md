@@ -61,6 +61,32 @@ dependencies {
 - implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 - implementation "com.querydsl:querydsl-apt:${queryDslVersion}"	
 	
+~~~java
+// querydsl 추가 시작
+def querydslDir = "$buildDir/generated/querydsl"
+
+querydsl {
+	jpa = true
+	querydslSourcesDir = querydslDir
+}
+
+sourceSets {
+	main.java.srcDir querydslDir
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	querydsl.extendsFrom compileClasspath
+}
+
+compileQuerydsl {
+	options.annotationProcessorPath = configurations.querydsl
+}
+// querydsl 추가 끝
+~~~
+	
 
 </div>
 </details>
