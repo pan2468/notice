@@ -17,6 +17,8 @@
 
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br> 
+
+</br>
 build.gradle
 ~~~ 
 buildscript {
