@@ -18,7 +18,7 @@
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br> 
 <details>
-<summary><b>build.gradle</b></summary>
+<summary><b></b></summary>
 <div markdown="1">
 	
 ~~~java
@@ -90,7 +90,7 @@ compileQuerydsl {
 </details>
 
 <details>
-<summary><b>BoardRepositoryCustom</b></summary>
+<summary><b>QueryDsl 사용</b></summary>
 <div markdown="1">
 	
 ~~~java	
