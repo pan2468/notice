@@ -24,8 +24,6 @@
 - 가장 기억이 남았던 Error는 Spring Security 로그인 인증 이였습니다.  
 - 로그인 화면에서 Email, Password 파라미터 값을 SecurityConfig 에서 가로채서 인증이 성공이 되면 .defaultSuccessUrl("/board/list") 공지사항 페이지 화면으로 넘어가지 않고  Spring Security 403 Forbidden Error가 발생되였습니다.
    
-
-
 <details>
 <summary><b>기존 코드</b></summary>
 <div markdown="1">
@@ -112,7 +110,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 </div>
 </details>
-
+</br>
 - 밑에 하단에 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"> 코드를 추가했습니다. 
 - 로그인 버튼 클릭 후 담아져 있던 세션 정보 값을 SecurityConfig 에서 인증 후 공지사항 페이지 화면으로 잘 넘어가는걸 알 수 있었습니다. 
 <details>
