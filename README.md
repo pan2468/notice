@@ -14,7 +14,6 @@
 + Gradle
 + MySQL
 ## ERD 
-ERD 작성
 <img src="https://user-images.githubusercontent.com/58936137/177627809-af8ae275-958e-491b-8c51-26a878ec0eb3.png" width="800px" height="350px">
 ## 핵심 기능
 핵심 기능 작성
