@@ -22,6 +22,8 @@
 ## 핵심 트러블슈팅 경험 
 
 - 가장 기억이 남았던 Error는 Spring Security 로그인 인증 이였습니다.  
+- 로그인 화면에서 Email, Password 파라미터 값을 SecurityConfig 에서 가로채서 인증이 성공이 되면 .defaultSuccessUrl("/board/list") 공지사항 페이지 화면으로 넘어가서 Spring Security 403 Forbidden Error가 발생되였습니다.
+   
 
 
 <details>
