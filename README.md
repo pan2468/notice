@@ -21,7 +21,7 @@
 <details>
 <summary><b>build.gradle</b></summary>
 <div markdown="1">
-~~~ 
+``` 
 buildscript {
 	ext {
 		queryDslVersion = "5.0.0"
@@ -34,7 +34,7 @@ plugins {
 	id 'java'
 	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
-~~~
+```
 </div>
 </details>
 + queryDslVersion = "5.0.0", id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" 추가합니다. 
