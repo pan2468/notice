@@ -16,7 +16,8 @@
 <img src="https://user-images.githubusercontent.com/58936137/177688167-f66e89b9-3d7c-4398-992b-6df26bbe253e.png" width="600px" height="350px">
 
 ## 핵심 기능
-- QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br> 
+- QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br>
+- JpaRepository 인터페이스 findAll() 메소드는 쿼리가 복잡해질 경우 QueryDsl 활용하여 JPQL 객체지향 쿼리를 통해서 원하는 조건문을 출력할 수 있습니다.
 <details>
 <summary><b>QueryDsl 설정</b></summary>
 <div markdown="1">
