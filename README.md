@@ -12,7 +12,7 @@
 + QueryDsl 5.0.0
 + Gradle
 + MySQL
-## ERD 
+## ERD 설계
 <img src="https://user-images.githubusercontent.com/58936137/177688167-f66e89b9-3d7c-4398-992b-6df26bbe253e.png" width="650px" height="450px">
 
 ## 핵심 기능
