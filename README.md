@@ -18,7 +18,9 @@
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br> 
 
-
+<details>
+<summary><b>build.gradle</b></summary>
+<div markdown="1">
 ~~~ build.gradle
 buildscript {
 	ext {
@@ -33,6 +35,8 @@ plugins {
 	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 ~~~
+</div>
+</details>
 + queryDslVersion = "5.0.0", id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" 추가합니다. 
 
 
