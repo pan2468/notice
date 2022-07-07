@@ -16,7 +16,24 @@
 <img src="https://user-images.githubusercontent.com/58936137/177688167-f66e89b9-3d7c-4398-992b-6df26bbe253e.png" width="600px" height="350px">
 
 ## 핵심 기능
-핵심 기능 작성
+- QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다. 
+build.gradle
+~~~ 
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+~~~
++ queryDslVersion = "5.0.0", id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" 추가합니다. 
+
 
 ## 핵심 트러블슈팅 경험 
 
