@@ -18,88 +18,24 @@
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br> 
 <details>
-<summary><b>기존 코드</b></summary>
+<summary><b>build.gradle</b></summary>
 <div markdown="1">
 
 ~~~java
-package com.food.config;
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
 
-import com.food.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-    @Autowired MemberService memberService;
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception{
-        
-        http
-                .formLogin()
-                .loginPage("/members/login")
-                .defaultSuccessUrl("/board/list")
-                .usernameParameter("email")
-                .failureUrl("/members/login/error")
-                .and()
-                .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/members/logout"))
-                .logoutSuccessUrl("/members/login");
-
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(memberService).passwordEncoder(passwordEncoder());
-    }
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 ~~~
-~~~
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{/layouts/layout}">
 
-<head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link href="layout1.css" th:href="@{/css/layout1.css}" rel="stylesheet">
-</head>
-
-
-<div class="container">
-	<h3>로그인 페이지</h3>
-	<a href="/members/project"><p>회원 가입 후 <br> 로그인 하시면 공지사항으로 이동</p></a>
-	<form role="form" method="post" action="/members/login">
-		<div class="mb-3">
-			<input type="email" name="email" class="form-control" id="email" placeholder="이메일을 입력해주세요">
-		</div>
-		<div class="mb-3">
-			<input type="password" name="password" id="password" class="form-control" placeholder="비밀번호 입력">
-		</div>
-		<p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
-		<button class="btn btn-primary" id="login">로그인</button>
-		<button type="button" class="btn btn-danger" onClick="location.href='/members/new'" id="login-sign">회원가입</button>
-	</form>
-</div>
-</html>
-~~~
 
 </div>
 </details>
