@@ -37,7 +37,7 @@ plugins {
 ```
 </div>
 </details>
-+ queryDslVersion = "5.0.0", id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" 추가합니다. 
+
 
 
 ## 핵심 트러블슈팅 경험 
