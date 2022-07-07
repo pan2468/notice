@@ -20,7 +20,7 @@
 <details>
 <summary><b>build.gradle</b></summary>
 <div markdown="1">
-
+	
 ~~~java
 buildscript {
 	ext {
@@ -92,7 +92,6 @@ compileQuerydsl {
 <details>
 <summary><b>BoardRepositoryCustom</b></summary>
 <div markdown="1">
-
 	
 ~~~java	
 import com.food.entity.Board;
@@ -126,6 +125,65 @@ public interface BoardRepositoryCustom {
     Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto);
 }
 ~~~
+- findAll() 메소드 매개변수에 BoardSearchDto 추가합니다. 
+~~~java
+
+import com.food.dto.BoardSearchDto;
+import com.food.entity.Board;
+import com.food.entity.QBoard;
+import com.querydsl.core.QueryResults;
+import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.thymeleaf.util.StringUtils;
+
+import javax.persistence.EntityManager;
+import java.util.List;
+
+public class BoardRepositoryCustomImpl implements BoardRepositoryCustom{
+    private JPAQueryFactory queryFactory;
+
+    public BoardRepositoryCustomImpl(EntityManager em){
+        this.queryFactory = new JPAQueryFactory(em);
+    }
+
+    private BooleanExpression searchByLike(String searchBy, String searchQuery){
+
+        if(StringUtils.equals("T",searchBy)){
+            return QBoard.board.title.like("%" + searchQuery + "%");
+        }else if(StringUtils.equals("C",searchBy)){
+            return QBoard.board.content.like("%" + searchQuery + "%");
+        }else if(StringUtils.equals("TC",searchBy)){
+            return QBoard.board.title.like("%" + searchQuery + "%")
+                    .or(QBoard.board.content.like("%" + searchQuery + "%"));
+        }
+        return null;
+    }
+
+    @Override
+    public Page<Board> findAll(Pageable pageable, BoardSearchDto boardSearchDto) {
+        QueryResults<Board> results = queryFactory
+                .selectFrom(QBoard.board)
+                .where(
+                        searchByLike(boardSearchDto.getSearchBy(),
+                                boardSearchDto.getSearchQuery())
+                )
+                .orderBy(QBoard.board.id.desc())
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .fetchResults();
+
+        List<Board> content = results.getResults();
+        long total = results.getTotal();
+        return new PageImpl<>(content, pageable, total);
+    }
+}
+
+~~~
+- findAll() 메소드 구현부에 QueryDsl 객체지향적인 쿼리를 통해서 여러 조건값을 넣어 조회할수 있습니다.	
+	
 </div>
 </details>
 
