@@ -13,7 +13,8 @@
 + Gradle
 + MySQL
 ## ERD 설계
-<img src="https://user-images.githubusercontent.com/58936137/177688167-f66e89b9-3d7c-4398-992b-6df26bbe253e.png" width="650px" height="450px">
+<img src="https://user-images.githubusercontent.com/58936137/178032412-a6266559-9f8b-4304-a3f0-78db24cb3f98.png" width="650px" height="450px">
+
 
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br>
