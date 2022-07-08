@@ -9,7 +9,7 @@
 + SpringBoot 2.7.0
 + Spring Security
 + Spring Data JPA
-+ QueryDsl 5.0.0
++ QueryDSL 5.0.0
 + Gradle
 + MySQL
 ## ERD 설계
