@@ -12,7 +12,7 @@
 + Gradle
 + MySQL
 ## 시퀀스 다이어그램
-
+<img src="https://user-images.githubusercontent.com/58936137/180013143-5a46faf5-64dc-4183-ad57-f4fffc9e5e4d.png" width="400px" height="500px">
 
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br>
