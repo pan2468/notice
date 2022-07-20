@@ -12,6 +12,8 @@
 + Gradle
 + MySQL
 ## 시퀀스 다이어그램
+
+<strong>JpaRepository CRUD</strong>
 <img src="https://user-images.githubusercontent.com/58936137/180013143-5a46faf5-64dc-4183-ad57-f4fffc9e5e4d.png" width="500px" height="400px">
 
 ## 핵심 기능
