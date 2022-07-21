@@ -202,7 +202,7 @@ public class BoardRepositoryCustomImpl implements BoardRepositoryCustom{
 <summary><b>연관 관계 일대일</b></summary>
 <div markdown="1">
 
-### Member.java
+#### Member.java
 ~~~
     @Id
     @Column(name = "member_id")
@@ -210,7 +210,7 @@ public class BoardRepositoryCustomImpl implements BoardRepositoryCustom{
     private Long id; // No
 ~~~
 
-### Board.java
+#### Board.java
 ~~~
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
