@@ -17,8 +17,13 @@
 ## 시퀀스 다이어그램
 
 <img src="https://user-images.githubusercontent.com/58936137/180138887-78f34a31-a84e-40df-9c0a-bb425e7c22d7.png" width="650px" height="400px">
-<br>
+
+<details>
+<summary><b>로그인 인증</b></summary>
+<div markdown="1">
 <img src="https://user-images.githubusercontent.com/58936137/180148166-0fdf2bc1-be8b-42b7-8f29-86a417afa112.png" width="650px" height="400px">
+</div>
+</details>
 
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br>
