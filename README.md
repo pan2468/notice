@@ -17,7 +17,7 @@
 ## 시퀀스 다이어그램
 
 
-<img src="https://user-images.githubusercontent.com/58936137/180242823-dc00a4a8-6e82-4298-993b-7ce944843d16.png" width="650px" height="400px">
+<img src="https://user-images.githubusercontent.com/58936137/180255278-533332c7-68ec-4a22-870a-d048ed842976.png" width="650px" height="400px">
 
 <details>
 <summary><b>로그인 인증 다이어그램</b></summary>
