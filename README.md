@@ -21,7 +21,7 @@
 <details>
 <summary><b>로그인 인증</b></summary>
 <div markdown="1">
-<img src="https://user-images.githubusercontent.com/58936137/180148166-0fdf2bc1-be8b-42b7-8f29-86a417afa112.png" width="650px" height="400px">
+<img src="https://user-images.githubusercontent.com/58936137/180148990-9afe9e28-c093-446a-8027-bfd80a024a6f.png" width="650px" height="400px">
 </div>
 </details>
 
