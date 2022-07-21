@@ -198,8 +198,28 @@ public class BoardRepositoryCustomImpl implements BoardRepositoryCustom{
 </div>
 </details>
 
+<details>
+<summary><b>연관 관계 일대일</b></summary>
+<div markdown="1">
+
+### Member.java
+~~~
+    @Id
+    @Column(name = "member_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id; // No
+~~~
+
+### Board.java
+~~~
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+~~~
 
 
+</div>
+</details>
 
 ## 핵심 트러블슈팅 경험 
 
