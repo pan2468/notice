@@ -16,7 +16,7 @@
 + MySQL
 ## 시퀀스 다이어그램
 
-<img src="https://user-images.githubusercontent.com/58936137/180013143-5a46faf5-64dc-4183-ad57-f4fffc9e5e4d.png" width="500px" height="400px">
+<img src="https://user-images.githubusercontent.com/58936137/180138887-78f34a31-a84e-40df-9c0a-bb425e7c22d7.png" width="500px" height="400px">
 
 ## 핵심 기능
 - QueryDsl 활용하여 여러 검색 조건을 통해서 간단한 공지사항 조회 서비스 입니다.</br>
