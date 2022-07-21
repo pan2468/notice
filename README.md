@@ -16,15 +16,23 @@
 + MySQL
 ## 시퀀스 다이어그램
 
-<img src="https://user-images.githubusercontent.com/58936137/180148990-9afe9e28-c093-446a-8027-bfd80a024a6f.png" width="650px" height="400px">
+
+<img src="https://user-images.githubusercontent.com/58936137/180242823-dc00a4a8-6e82-4298-993b-7ce944843d16.png" width="650px" height="400px">
 
 <details>
-<summary><b>게시판 CRUD 시퀀스 다이어그램</b></summary>
+<summary><b>로그인 인증 다이어그램</b></summary>
+<div markdown="1">
+
+<img src="https://user-images.githubusercontent.com/58936137/180148990-9afe9e28-c093-446a-8027-bfd80a024a6f.png" width="650px" height="400px">	
+
+</div>
+</details>	
+
+<details>
+<summary><b>게시판 CRUD 다이어그램</b></summary>
 <div markdown="1">
 
 <img src="https://user-images.githubusercontent.com/58936137/180138887-78f34a31-a84e-40df-9c0a-bb425e7c22d7.png" width="650px" height="400px">
-
-<img src="https://user-images.githubusercontent.com/58936137/180242823-dc00a4a8-6e82-4298-993b-7ce944843d16.png" width="650px" height="400px">
 
 </div>
 </details>
