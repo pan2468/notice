@@ -2,8 +2,7 @@
 
 + 프로젝트 소개를 하면 간단한 로그인, 회원가입, 공지사항 CRUD 입니다. 
 + 회원 및 공지사항 개발한 이유는 실무에 중요하기 때문에 혼자 구글링 통해서 Front-End와 Back-End 같이 적용하여 하나의 개인프로젝트를 완성 시킬수 있었습니다.
-+ Fron-End 부분은 Bootstap 템플릿을 이용하여, UI & UX 만들수 있었고, Back-End 부분은 원래 Springframework 사용하면서 MyBatis 동적쿼리로 불필요한 반복적인 CRUD 개발을 하였습니다. 
-+ JPA를 적용을 하여 JpaRepository 인터페이스에서 제공해주는 CRUD 메소드 사용하면서 개발의 생산성향상과 코드의 안정성에 대해서 차이점을 알 수 있었습니다.
++ Fron-End 부분은 Bootstap 템플릿을 이용하여, UI & UX 만들수 있었고, Back-End 부분은 원래 Springframework 사용하면서 MyBatis 동적쿼리로 불필요한 반복적인 CRUD 개발을 하였습니다.JPA를 적용을 하여 JpaRepository 인터페이스에서 제공해주는 CRUD 메소드 사용하면서 개발의 생산성향상과 코드의 안정성에 대해서 차이점을 알 수 있었습니다.
 + findAll() 메소드에 조건문이 많아 복잡한 쿼리의 경우 QueryDSL 이용하여 객체지향 쿼리로 개선할 수 있었습니다. 
 
 ### 기능 설명
