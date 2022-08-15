@@ -369,7 +369,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 </details>
 
 ### 서비스 화면
-
+<img src="https://user-images.githubusercontent.com/58936137/184604368-61a7d3ed-9b84-48cc-aaee-23e246565f00.png" width="350px" height="400px">
 <img src="https://user-images.githubusercontent.com/58936137/184604186-edfa55bf-91bd-4dbd-bcfe-80d65a766b7b.png" width="650px" height="400px">
 
 ### 👉 개인 프로젝트 블로그
