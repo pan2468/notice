@@ -370,7 +370,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 서비스 화면
 
-<img src="https://user-images.githubusercontent.com/58936137/184604674-e0fbcbce-72b2-44b1-8ff6-2476e6c320c4.png" width="150px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184604368-61a7d3ed-9b84-48cc-aaee-23e246565f00.png" width="150px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184606012-cdb85719-80b0-4b99-87b4-dc67ee56bda1.png" width="250px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184605634-980bc235-4e64-454d-a4e8-b2a861355bf2.png" width="250px" height="150px">
+<img src="https://user-images.githubusercontent.com/58936137/184604674-e0fbcbce-72b2-44b1-8ff6-2476e6c320c4.png" width="150px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184604368-61a7d3ed-9b84-48cc-aaee-23e246565f00.png" width="150px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184606012-cdb85719-80b0-4b99-87b4-dc67ee56bda1.png" width="150px" height="150px"><img src="https://user-images.githubusercontent.com/58936137/184605634-980bc235-4e64-454d-a4e8-b2a861355bf2.png" width="250px" height="150px">
 	
 
 
