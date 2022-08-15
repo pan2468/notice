@@ -369,7 +369,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 </details>
 
 ### 서비스 화면
-<img src="https://user-images.githubusercontent.com/58936137/184604368-61a7d3ed-9b84-48cc-aaee-23e246565f00.png" width="350px" height="400px"><img src="https://user-images.githubusercontent.com/58936137/184604186-edfa55bf-91bd-4dbd-bcfe-80d65a766b7b.png" width="650px" height="400px">
+
+<img src="https://user-images.githubusercontent.com/58936137/184604674-e0fbcbce-72b2-44b1-8ff6-2476e6c320c4.png" width="350px" height="400px"><img src="https://user-images.githubusercontent.com/58936137/184604368-61a7d3ed-9b84-48cc-aaee-23e246565f00.png" width="350px" height="400px">
+<img src="https://user-images.githubusercontent.com/58936137/184604186-edfa55bf-91bd-4dbd-bcfe-80d65a766b7b.png" width="650px" height="400px">
 
 ### 👉 개인 프로젝트 블로그
 + <a href="https://pan2468.tistory.com/category/Toy%20Project/%ED%9A%8C%EC%9B%90%20%EB%B0%8F%20%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD">개인 프로젝트 설명</a>
